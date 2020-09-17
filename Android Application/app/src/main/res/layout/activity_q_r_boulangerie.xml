@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background1"
+    tools:context=".views.QRBoulangerieActivity">
+
+    <ImageView
+        android:id="@+id/title_ImageView"
+        android:layout_width="93dp"
+        android:layout_height="65dp"
+        android:layout_above="@+id/productId_TextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:src="@drawable/boulangerie_icon_black" />
+
+    <TextView
+        android:id="@+id/productId_TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/qr_scan_Button"
+        android:layout_centerHorizontal="true"
+        android:text="Product ID" />
+
+    <Button
+        android:id="@+id/qr_scan_Button"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/ic_button_qr_scan"
+        android:onClick="scan" />
+
+    <Button
+        android:id="@+id/submit_Button"
+        android:layout_width="169dp"
+        android:layout_height="58dp"
+        android:layout_below="@id/qr_scan_Button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_button_submit"
+        android:onClick="submit" />
+
+</RelativeLayout>

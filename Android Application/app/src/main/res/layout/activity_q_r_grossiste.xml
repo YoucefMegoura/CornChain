@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background1"
+    tools:context=".views.QRGrossisteActivity">
+
+    <ImageView
+        android:id="@+id/title_ImageView"
+        android:layout_width="84dp"
+        android:layout_height="49dp"
+        android:layout_above="@+id/productHum_EditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/grossiste_icon_black" />
+
+    <EditText
+        android:id="@+id/productHum_EditText"
+        android:layout_width="294dp"
+        android:layout_height="61dp"
+        android:layout_above="@+id/productTemp_EditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/edittext_white"
+        android:enabled="false"
+        android:hint="Humidity %"
+        android:inputType="number"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp" />
+
+
+    <EditText
+        android:id="@+id/productTemp_EditText"
+        android:layout_width="294dp"
+        android:layout_height="61dp"
+        android:layout_above="@+id/qr_scan_Button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/edittext_white"
+        android:enabled="false"
+        android:hint="Temerature C°"
+        android:inputType="number"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+
+        />
+
+
+    <TextView
+        android:id="@+id/productId_TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/qr_scan_Button"
+        android:layout_centerHorizontal="true"
+        android:text="Product ID" />
+
+    <Button
+        android:id="@+id/qr_scan_Button"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/ic_button_qr_scan"
+        android:onClick="scan" />
+
+    <Button
+        android:id="@+id/submit_Button"
+        android:layout_width="169dp"
+        android:layout_height="58dp"
+        android:layout_below="@id/qr_scan_Button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_button_submit"
+        android:onClick="submit" />
+
+    <Button
+        android:id="@+id/bluetooth_connect_Button"
+        android:layout_width="47dp"
+        android:layout_height="39dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/ic_button_bluetooth_blue"
+        android:onClick="connectBluetooth" />
+
+    <Button
+        android:id="@+id/bluetooth_disconnect_Button"
+        android:layout_width="47dp"
+        android:layout_height="39dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/bluetooth_connect_Button"
+        android:background="@drawable/ic_button_cancel_blutooth"
+        android:onClick="disconnectBluetooth" />
+
+
+</RelativeLayout>
